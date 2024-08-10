@@ -1,0 +1,197 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 166, 0, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+   
+}
+
+main {
+    margin-top: 80px; /* Menyesuaikan dengan tinggi header */
+}
+
+/* styles.css */
+
+/* Banner Section */
+.banner {
+    position: relative;
+    height: 85vh;
+    background-image: url('image1.png'); /* Ganti dengan gambar banner Anda */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Untuk efek parallax */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* Area miring di bawah */
+}
+
+.banner-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* styles.css */
+
+/* Wrapper for centering the content */
+.list-posts {
+    max-width: 1200px; /* Batasi lebar maksimum */
+    margin: 0 auto; /* Centering */
+    padding: 0 20px; /* Tambahan padding untuk sedikit ruang di sisi kiri dan kanan */
+}
+
+/* Grid Layout */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Batasi minimum width per card */
+    gap: 20px;
+}
+
+/* Card Layout */
+.post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.post-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 15px;
+}
+
+.post-date {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.post-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Hover effect for post cards */
+.post-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* styles.css */
+
+/* Flexbox layout for controls */
+.list-controls {
+    display: flex;
+    justify-content: space-between; /* Memisahkan teks dan dropdown ke kiri dan kanan */
+    font-weight: bold;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Grouping the label with the dropdowns */
+.control-group {
+    display: flex;
+    align-items: center;
+}
+
+.control-group label {
+    margin-right: 20px; /* Menambahkan jarak lebih banyak antara label dan dropdown */
+    font-weight: bold; /* Opsional: Menambah ketebalan teks pada label */
+}
+
+.control-group select {
+    margin-left: 10px; /* Jarak antar dropdown jika ada lebih dari satu */
+}
+
+/* Style for each select dropdown */
+.control-group select#showPerPage, 
+.control-group select#sortBy {
+    margin-right: 20px;
+    padding: 8px 12px; /* Menambahkan padding untuk dropdown agar lebih besar dan mudah diakses */
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1rem; /* Ukuran font dropdown agar konsisten */
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    user-select: none;
+}
+
+.pagination span {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination span.active {
+    background-color:  rgba(255, 166, 0, 0.8);
+    color: white;
+}
+
+.pagination span:hover:not(.active) {
+    background-color:  rgba(255, 166, 0, 0.8);
+    color: white;
+}
